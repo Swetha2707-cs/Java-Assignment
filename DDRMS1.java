@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class DDRMS {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> docs = new ArrayList<>();
+        int choice;
+
+        do {
+            System.out.println("\n1.Add Document");
+            System.out.println("2.View Documents");
+            System.out.println("3.Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+            sc.nextLine();
+
+            if (choice == 1) {
+                System.out.print("Enter document name: ");
+                String name = sc.nextLine();
+                docs.add(name);
+                System.out.println("Document Added!");
+            }
+
+            else if (choice == 2) {
+                System.out.println("Documents List:");
+                for (String d : docs)
+                    System.out.println(d);
+            }
+
+        } while (choice != 3);
+
+        System.out.println("Program Ended");
+    }
+}
